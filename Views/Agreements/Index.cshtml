@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <button id="newAgreementButton" class="btn btn-primary">New Agreement</button>
+</p>
+<table class="table display" id="dataTable" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                User Name
+            </th>
+            <th>
+                Product Group Code
+            </th>
+            <th>
+                Product Number
+            </th>
+            <th>
+                Effective Date
+            </th>
+            <th>
+                Expiration Date
+            </th>
+            <th>
+                Product Price
+            </th>
+            <th>
+                New Price
+            </th>
+            <th>
+                Action
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+<div id="agreementDialog" style="display: none;" class="col-12">
+    @*<partial name="_AddEditPartial" model="new Agreement()"/>*@
+   
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("AgreementScript");}
+}
